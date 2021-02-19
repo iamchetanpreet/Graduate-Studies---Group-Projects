@@ -1,0 +1,52 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.7.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'CSCI5308'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+	all {
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+	implementation 'org.springframework.session:spring-session-core'
+	implementation "io.jsonwebtoken:jjwt-api:0.11.0"
+	implementation "io.jsonwebtoken:jjwt-jackson:0.11.0", {exclude group:'io.jsonwebtoken', module:'jjwt-api'}
+	implementation "io.jsonwebtoken:jjwt-impl:0.11.0", {exclude group:'io.jsonwebtoken', module:'jjwt-api'}
+	compile "com.opencsv:opencsv:5.1"
+	compile 'io.jsonwebtoken:jjwt-api:0.11.2'
+	runtime 'io.jsonwebtoken:jjwt-impl:0.11.2',
+			// Uncomment the next line if you want to use RSASSA-PSS (PS256, PS384, PS512) algorithms:
+			'org.bouncycastle:bcprov-jdk15on:1.60',
+			'io.jsonwebtoken:jjwt-jackson:0.11.2' // or 'io.jsonwebtoken:jjwt-gson:0.11.2' for gson
+	compile 'org.springframework.boot:spring-boot-starter-log4j2'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'mysql:mysql-connector-java'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+test {
+	useJUnitPlatform()
+}
