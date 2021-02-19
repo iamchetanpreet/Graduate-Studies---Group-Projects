@@ -1,0 +1,12 @@
+[Execution Time][anqi] Time used for CREATE is 23586750 nanoseconds 
+[Execution Time][anqi] Time used for INSERT is 7730262 nanoseconds
+[Execution Time][anqi] Time used for INSERT is 5190997 nanoseconds
+[Execution Time][anqi] Time used for CREATE is 1911035 nanoseconds 
+[Execution Time][anqi] Time used for INSERT is 4792433 nanoseconds
+[Execution Time][anqi] Time used for INSERT is 3382734 nanoseconds
+[Execution Time][anqi] Time used for UPDATE is 20014415151 nanoseconds
+[Execution Time][anqi] Time used for UPDATE is 20009302117 nanoseconds
+[Execution Time][anqi] Time used for ALTER PK is 10879340 nanoseconds
+[Execution Time][anqi] Time used for ALTER FK is 11459213 nanoseconds
+[Execution Time][anqi] Time used for CREATE DUMP FILE is 1667690 nanoseconds
+[Execution Time][anqi] Time used for INSERT is 10030710 nanoseconds
